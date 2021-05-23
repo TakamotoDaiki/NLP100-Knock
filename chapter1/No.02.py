@@ -3,8 +3,8 @@ def main():
     string2 = 'タクシー'
     answer = ''
 
-    for i in range(0, len(string1)):
-        answer += f"{string1[i]}{string2[i]}"
+    for chara1, chara2 in zip(string1, string2):
+        answer += f"{chara1}{chara2}"
 
     print(answer)
 

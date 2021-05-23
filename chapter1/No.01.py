@@ -1,8 +1,8 @@
 def main():
     string = 'パタトクカシーー'
     answer = ''
-    for i in range(0,len(string),2):
-        answer += string[i]
+    
+    answer += string[::2]
 
     print(answer)
         
