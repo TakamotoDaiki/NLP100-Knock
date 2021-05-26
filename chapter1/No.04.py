@@ -7,14 +7,12 @@ def main():
     strings = strings.replace('.', '')
     split_strings = strings.split()
 
-    index = 1
-    for string in zip(split_strings):
-        if index in numbers:
-            dict[str(index)] = string[0][0]
-        else:
-            dict[str(index)] = string[0][0:2]
-            
+    for index, string in enumerate(split_strings):
         index += 1
+        if index in numbers:
+            dict[index] = string[0]
+        else:
+            dict[index] = string[0:2]
 
     print(dict)
 

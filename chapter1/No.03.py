@@ -6,8 +6,8 @@ def main():
     strings = re.sub(',', '', strings)
     strings = strings.replace('.', '')
     split_string = strings.split()
-    for string in zip(split_string):
-        answer += str(len(string[0]))
+    for string in split_string:
+        answer += str(len(string))
 
     print(answer)
 
