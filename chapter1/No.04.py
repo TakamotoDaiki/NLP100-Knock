@@ -7,8 +7,7 @@ def main():
     strings = strings.replace('.', '')
     split_strings = strings.split()
 
-    for index, string in enumerate(split_strings):
-        index += 1
+    for index, string in enumerate(split_strings, 1):
         if index in numbers:
             dict[index] = string[0]
         else:
