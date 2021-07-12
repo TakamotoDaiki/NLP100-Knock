@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 def main():
     
@@ -7,7 +8,7 @@ def main():
 
     category_lines = []
     for line in British.split('\n'):
-        if '[[Category:' in line:
+        if re.search(r'\[\[Category:', line):
             category_lines.append(line)
 
     print(category_lines)
