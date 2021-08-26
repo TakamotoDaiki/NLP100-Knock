@@ -6,8 +6,8 @@ def remove_markup(text):
     text = re.sub(r'\[\[(?:[^|]*?\|)??([^|]*?)\]\]', r'\1', text)
     text = re.sub(r'\[https?://[\w!?/\+\-_~=;\.,*&@#$%\(\)\'\[\]]+', '', text)
     text = re.sub(r'<.+?>', '', text)
-    #text = re.sub(r'\{\{.+\}\}', '', text)
-    text = re.sub(r'\{\{(?:lang|仮リンク)(?:[^|]*?\|)*?([^|]*?)\}}', r'\1', text)
+    text = re.sub(r'\{\{.+?\}\}', '', text)
+    #text = re.sub(r'\{\{(?:lang|仮リンク)(?:[^|]*?\|)*?([^|]*?)\}}', r'\1', text)
     
 
     return text
